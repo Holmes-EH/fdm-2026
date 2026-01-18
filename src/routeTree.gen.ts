@@ -9,8 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as QualitiesRouteImport } from './routes/qualities'
+import { Route as PerspectivesRouteImport } from './routes/perspectives'
+import { Route as PathwayRouteImport } from './routes/pathway'
+import { Route as ConditionsRouteImport } from './routes/conditions'
+import { Route as CareerRouteImport } from './routes/career'
 import { Route as IndexRouteImport } from './routes/index'
 
+const QualitiesRoute = QualitiesRouteImport.update({
+  id: '/qualities',
+  path: '/qualities',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerspectivesRoute = PerspectivesRouteImport.update({
+  id: '/perspectives',
+  path: '/perspectives',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PathwayRoute = PathwayRouteImport.update({
+  id: '/pathway',
+  path: '/pathway',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConditionsRoute = ConditionsRouteImport.update({
+  id: '/conditions',
+  path: '/conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareerRoute = CareerRouteImport.update({
+  id: '/career',
+  path: '/career',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +49,102 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/career': typeof CareerRoute
+  '/conditions': typeof ConditionsRoute
+  '/pathway': typeof PathwayRoute
+  '/perspectives': typeof PerspectivesRoute
+  '/qualities': typeof QualitiesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/career': typeof CareerRoute
+  '/conditions': typeof ConditionsRoute
+  '/pathway': typeof PathwayRoute
+  '/perspectives': typeof PerspectivesRoute
+  '/qualities': typeof QualitiesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/career': typeof CareerRoute
+  '/conditions': typeof ConditionsRoute
+  '/pathway': typeof PathwayRoute
+  '/perspectives': typeof PerspectivesRoute
+  '/qualities': typeof QualitiesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/career'
+    | '/conditions'
+    | '/pathway'
+    | '/perspectives'
+    | '/qualities'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/career'
+    | '/conditions'
+    | '/pathway'
+    | '/perspectives'
+    | '/qualities'
+  id:
+    | '__root__'
+    | '/'
+    | '/career'
+    | '/conditions'
+    | '/pathway'
+    | '/perspectives'
+    | '/qualities'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CareerRoute: typeof CareerRoute
+  ConditionsRoute: typeof ConditionsRoute
+  PathwayRoute: typeof PathwayRoute
+  PerspectivesRoute: typeof PerspectivesRoute
+  QualitiesRoute: typeof QualitiesRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/qualities': {
+      id: '/qualities'
+      path: '/qualities'
+      fullPath: '/qualities'
+      preLoaderRoute: typeof QualitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/perspectives': {
+      id: '/perspectives'
+      path: '/perspectives'
+      fullPath: '/perspectives'
+      preLoaderRoute: typeof PerspectivesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pathway': {
+      id: '/pathway'
+      path: '/pathway'
+      fullPath: '/pathway'
+      preLoaderRoute: typeof PathwayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conditions': {
+      id: '/conditions'
+      path: '/conditions'
+      fullPath: '/conditions'
+      preLoaderRoute: typeof ConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/career': {
+      id: '/career'
+      path: '/career'
+      fullPath: '/career'
+      preLoaderRoute: typeof CareerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +157,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CareerRoute: CareerRoute,
+  ConditionsRoute: ConditionsRoute,
+  PathwayRoute: PathwayRoute,
+  PerspectivesRoute: PerspectivesRoute,
+  QualitiesRoute: QualitiesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
