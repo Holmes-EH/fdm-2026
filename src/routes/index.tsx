@@ -302,7 +302,7 @@ function App() {
 						</svg>
 					</div>
 					<h1 className="text-5xl sm:text-6xl font-bold bg-linear-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-						Explorer la Carrière
+						Explorer la Carrière d'ingénieur informatique
 					</h1>
 					<p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
 						Découvrez le monde fascinant du développement logiciel et de
