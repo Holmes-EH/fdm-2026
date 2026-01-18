@@ -6,6 +6,7 @@ WORKDIR /usr/src/app
 FROM base AS builder
 COPY . .
 RUN bun install --frozen-lockfile --production
+COPY ./vite.config.ts vite.config.ts
 RUN bun run build
 
 
