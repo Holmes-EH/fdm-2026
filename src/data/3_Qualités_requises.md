@@ -1,3 +1,7 @@
+---
+title: Qualités requises
+---
+
 ### **3. Qualités requises**
 
 **Titre** : _"Les super-pouvoirs d’un bon développeur !"_

@@ -1,3 +1,7 @@
+---
+title: Formation
+---
+
 ### **4. Formation**
 
 **Titre** : _"Comment devenir développeur ?"_
