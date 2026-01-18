@@ -1,10 +1,9 @@
 /** biome-ignore-all lint/a11y/noSvgWithoutTitle: sure */
-import * as reactRouter from "@tanstack/react-router";
-import { Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
-export const Route = reactRouter.createFileRoute("/perspectives")({
+export const Route = createFileRoute("/perspectives")({
 	component: PerspectivesPage,
 });
 
