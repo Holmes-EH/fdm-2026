@@ -319,54 +319,6 @@ function PerspectivesPage() {
 					</div>
 				</div>
 
-				{/* Salary Section */}
-				<div className="mb-16">
-					<Card className="p-8 border-2 border-indigo-200/30 hover:border-indigo-300/50 transition-colors bg-linear-to-br from-indigo-50/50 to-purple-50/50">
-						<h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-							<span className="w-2 h-2 rounded-full bg-indigo-500" />
-							Rémunération
-						</h2>
-						<div className="grid md:grid-cols-3 gap-6">
-							<div className="p-6 bg-white rounded-lg border border-indigo-100">
-								<div className="text-sm text-muted-foreground mb-2">
-									Début de Carrière
-								</div>
-								<div className="text-3xl font-bold text-indigo-600">
-									2 000€ - 3 000€
-								</div>
-								<p className="text-sm text-muted-foreground mt-2">
-									Par mois en France
-								</p>
-							</div>
-							<div className="p-6 bg-white rounded-lg border border-purple-100">
-								<div className="text-sm text-muted-foreground mb-2">
-									Expérience
-								</div>
-								<div className="text-3xl font-bold text-purple-600">
-									3 500€ - 5 000€
-								</div>
-								<p className="text-sm text-muted-foreground mt-2">
-									Après 5-10 ans
-								</p>
-							</div>
-							<div className="p-6 bg-white rounded-lg border border-pink-100">
-								<div className="text-sm text-muted-foreground mb-2">
-									Senior / Lead
-								</div>
-								<div className="text-3xl font-bold text-pink-600">5 000€+</div>
-								<p className="text-sm text-muted-foreground mt-2">
-									Avec expertise reconnue
-								</p>
-							</div>
-						</div>
-						<p className="text-muted-foreground mt-6 text-center">
-							C'est un métier bien payé, surtout avec l'expérience. Les salaires
-							peuvent être plus élevés dans les grandes villes ou les startups
-							dynamiques.
-						</p>
-					</Card>
-				</div>
-
 				{/* International Section */}
 				<div className="mb-8">
 					<Card className="p-8 border-2 border-green-200/30 hover:border-green-300/50 transition-colors">

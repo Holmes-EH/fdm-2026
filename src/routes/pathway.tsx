@@ -225,7 +225,7 @@ function PathwayPage() {
 						{[
 							{
 								name: "OpenClassrooms",
-								url: "https://openclassrooms.com/",
+								url: "https://openclassrooms.com/fr/",
 								description:
 									"Cours en ligne gratuits et payants sur la programmation",
 								icon: "📚",
